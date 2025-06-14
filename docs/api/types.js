@@ -218,6 +218,19 @@ export let objects = {
 
   schedule : [
   {
+    name: 'id',
+    type: types.id
+  },
+  {
+    name: 'name',
+    type: 'string',
+    description: (
+      <span>
+        Not mandatory but schedule names must be unique.
+      </span>
+    ),
+  },
+  {
     name: 'rule',
     type: 'string',
     description: (
