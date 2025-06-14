@@ -546,6 +546,41 @@ Delete a rule.
 }
 ```
 
+## Schedule
+
+#### Schedule
+
+<StructType fields={objects.schedule} />
+
+#### RecurConfig
+
+<StructType fields={objects.recurConfig} />
+
+#### Methods
+
+#### `getSchedules`
+
+<Method name="getSchedules" args={[]} returns="Promise<Schedule[]>" />
+
+Get all schedules. Returns an array of [`Schedule`](#schedule) objects.
+
+#### `createSchedule`
+
+<Method name="createSchedule" args={[{ properties: [{ name: 'schedule', type: 'Schedule' }] }]} returns="Promise<id>" />
+
+Create schedule based on information filled in the schedule object. Please refer to notes of schedule object for details each field.
+
+#### `updateSchedule`
+
+<Method name="updateSchedule" args={[{ name: 'id', type: 'id' }, { name: 'fields', type: 'object' }]} returns="Promise<schedule>" />
+
+Update fields of a rule. `fields` can specify any field described in [`Schedule`](#Schedule). Returns the updated rule.
+
+#### `deleteSchedule`
+
+<Method name="deleteSchedule" args={[{ name: 'id', type: 'id' }]} returns="Promise<null>" />
+
+
 ## Misc
 
 #### BudgetFile
