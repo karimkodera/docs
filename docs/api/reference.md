@@ -70,6 +70,15 @@ import APIList from './APIList';
 "deleteRule"
 ]} />
 
+<APIList title="Schedules" sections={[
+"Schedule",
+"RecurConfig",
+"getSchedules",
+"createSchedule",
+"updateSchedule",
+"deleteSchedule"
+]} />
+
 <APIList title="Misc" sections={[
 "BudgetFile",
 "initConfig",
@@ -82,7 +91,8 @@ import APIList from './APIList';
 "loadBudget",
 "downloadBudget",
 "batchBudgetUpdates",
-"runQuery"
+"runQuery",
+"getIDByName"
 ]} />
 
 ## Types of Methods
@@ -652,3 +662,9 @@ Performs a batch of budget updates. This is useful for making multiple changes t
 <Method name="runQuery" args={[{ properties: [{ name: 'query', type: 'ActualQL' }] }]} returns="Promise<unknown>" />
 
 Allows running any arbitrary ActualQL query on the open budget.
+
+#### `getIDByName`
+
+<Method name="getIDByName" args={[{ properties: [{ name: 'type', type: 'string' }, { name: 'string', type: 'string'}] }]} returns="Promise<string>" />
+
+get the ID for any Account, Payee or Schedule by providing the corresponding name. 
