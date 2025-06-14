@@ -667,4 +667,8 @@ Allows running any arbitrary ActualQL query on the open budget.
 
 <Method name="getIDByName" args={[{ properties: [{ name: 'type', type: 'string' }, { name: 'string', type: 'string'}] }]} returns="Promise<string>" />
 
-get the ID for any Account, Payee or Schedule by providing the corresponding name. 
+get the ID for any Account, Payee, Category or Schedule by providing the corresponding name. Allowed types are 'accounts', 'schedules', 'categories', 'payees'.
+
+<Method name="getServerVersion" args={[]} returns="Promise<string>" />
+
+return error or the current server versions.
